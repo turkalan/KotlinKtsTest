@@ -1,0 +1,151 @@
+[versions]
+#App Config
+minSdk = "26"
+targetSdk = "34"
+compileSdk = "34"
+versionCode = "1"
+versionName = "1.0.0"
+applicationId = "com.turkalan.seedproject"
+
+#Android Build
+appcompat = "1.7.0"
+agp = "8.6.1"
+kotlin = "2.0.20"
+coreKtx = "1.13.1"
+ksp = "2.0.20-1.0.24"
+googleServices = "4.4.2"
+
+#Android Project Dependencies
+constraintLayout = "2.1.4"
+material = "1.12.0"
+
+#Compose
+composeBom = "2024.08.00"
+composeActivity = "1.9.2"
+composePreview = "1.7.1"
+composeLifecycle = "2.8.6"
+composeGlide = "1.0.0-beta01"
+composeViewbinding = "1.7.1"
+androidxComposeMaterial3 = "1.3.0"
+
+#Kotlin Coroutines
+kotlinxCoroutines = "1.8.1"
+
+#Koin
+koin = "3.4.2"
+
+#Retrofit
+retrofit = "2.11.0"
+loggingInterceptor = "4.12.0"
+gson = "2.10.1"
+
+#Architecture
+lifecycle = "2.8.6"
+lifecycleExtensions = "2.2.0"
+
+#Glide
+glide = "4.15.1"
+
+#Timber
+timber = "5.0.1"
+
+#Media
+androidxMedia3 = "1.4.1"
+
+#Detekt
+detekt="1.23.7"
+
+#Testing
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+kotlinGradlePlugin = "1.9.0"
+
+[libraries]
+#Android
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+#Android Project Dependencies
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+#Koin
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-compat = { group = "io.insert-koin", name = "koin-android-compat", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+
+#Architecture
+lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycleExtensions" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+
+#Retrofit
+retrofit-runtime = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+
+#Kotlin Coroutines
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+
+#Compose
+compose-compiler-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3"}
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-lifecycle = { group="androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "composeLifecycle" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview"}
+compose-preview-debug = { group = "androidx.compose.ui", name = "ui-tooling"}
+compose-ui = { group = "androidx.compose.ui", name = "ui"}
+compose-activity = { group = "androidx.activity", name = "activity-compose"}
+compose-glide = { group = "com.github.bumptech.glide", name = "compose", version.ref = "composeGlide" }
+
+#Detekt
+detekt-gradle-plugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+detekt-ruleset-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
+kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+kotlin-ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+
+#Media
+exoplayer-media3 = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "androidxMedia3" }
+exoplayer-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "androidxMedia3" }
+
+#Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+[bundles]
+defaultUI = ["material"]
+coroutines = ["kotlinx-coroutines-android", "kotlinx-coroutines-test"]
+koin = ["koin-core", "koin-android", "koin-compat", "koin-compose"]
+retrofit = ["retrofit-runtime", "retrofit-gson", "retrofit-converter-gson", "retrofit-logging-interceptor"]
+lifecycle = ["lifecycle-extensions", "lifecycle-viewmodel", "lifecycle-livedata", "lifecycle-runtime"]
+player = ["exoplayer-media3", "exoplayer-media3-ui"]
+compose = [
+    "compose-material3",
+    "compose-foundation",
+    "compose-lifecycle",
+    "compose-preview",
+    "compose-preview-debug",
+    "compose-ui",
+    "compose-activity",
+    "compose-glide",
+]
+
+[plugins]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+build-config = { id = "com.turkalan.build.config.plugin" }
+android-ui-library = { id = "com.turkalan.android.ui.library" }
+android-library = { id = "com.turkalan.android.library" }
