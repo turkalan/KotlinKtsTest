@@ -12,15 +12,15 @@ repositories {
 gradlePlugin {
     plugins {
         register("buildVariantsPlugin") {
-            id = "com.turkalan.build.config.plugin"
+            id = "com.turkalan.build.variants.plugin"
             implementationClass = "BuildVariantsConventionPlugin"
         }
         register("androidLibrary") {
-            id = "com.turkalan.android.library"
+            id = "com.turkalan.android.library.plugin"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidUiLibrary") {
-            id = "com.turkalan.android.ui.library"
+            id = "com.turkalan.android.ui.library.plugin"
             implementationClass = "AndroidUiLibraryConventionPlugin"
         }
     }

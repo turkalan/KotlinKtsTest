@@ -11,6 +11,7 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -25,3 +26,4 @@ dependencyResolutionManagement {
 rootProject.name = "SeedProject"
 include(":app")
 include(":feature:home")
+include(":common:compose")

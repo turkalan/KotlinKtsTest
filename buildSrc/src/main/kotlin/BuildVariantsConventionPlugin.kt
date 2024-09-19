@@ -22,35 +22,8 @@ class BuildVariantsConventionPlugin : Plugin<Project> {
     private fun configureBuildVariants(extension: TestedExtension) {
         if (extension is AppExtension || extension is LibraryExtension) {
             extension.apply {
-                flavorDimensions("country")
-                productFlavors {
-                    create("hrvatska") {
-                        if (this is AppExtension) {
-                            applicationIdSuffix = ".hrv"
-                        }
-                        dimension = "country"
-                    }
-                    create("srbija")  {
-                        if (this is AppExtension) {
-                            applicationIdSuffix = ".srb"
-                        }
-                        dimension = "country"
-                    }
-                    create("bih") {
-                        if (this is AppExtension) {
-                            applicationIdSuffix = ".bih"
-                        }
-                        dimension = "country"
-                    }
-                    create("kosovo")  {
-                        if (this is AppExtension) {
-                            applicationIdSuffix = ".kos"
-                        }
-                        dimension = "country"
-                    }
-                }
                 buildTypes {
-                    getByName("release") {
+                    getByName(RELEASE) {
                         isMinifyEnabled = true
                         isDebuggable = false
                         if (extension is AppExtension) isShrinkResources = true
@@ -59,16 +32,21 @@ class BuildVariantsConventionPlugin : Plugin<Project> {
                             "proguard-rules.pro"
                         )
                     }
-                    getByName("debug") {
+                    getByName(DEBUG) {
                         isMinifyEnabled = false
                         isDebuggable = true
                         if (extension is AppExtension) {
                             isShrinkResources = false
-                            applicationIdSuffix = ".debug"
+                            applicationIdSuffix = DEBUG_ID_SUFFIX
                         }
                     }
                 }
             }
         }
+    }
+    companion object {
+        const val RELEASE = "release"
+        const val DEBUG = "debug"
+        const val DEBUG_ID_SUFFIX = ".$DEBUG"
     }
 }

@@ -1,6 +1,5 @@
 plugins {
-    id("baseUiBuild")
-    alias(libs.plugins.build.config)
+    id(libs.plugins.android.ui.library.get().pluginId)
 }
 
 android {

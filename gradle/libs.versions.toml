@@ -59,7 +59,6 @@ detekt="1.23.7"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-kotlinGradlePlugin = "1.9.0"
 
 [libraries]
 #Android
@@ -146,6 +145,6 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
-build-config = { id = "com.turkalan.build.config.plugin" }
-android-ui-library = { id = "com.turkalan.android.ui.library" }
-android-library = { id = "com.turkalan.android.library" }
+build-config = { id = "com.turkalan.build.variants.plugin" }
+android-ui-library = { id = "com.turkalan.android.ui.library.plugin" }
+android-library = { id = "com.turkalan.android.library.plugin" }
