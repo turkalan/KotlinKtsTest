@@ -25,7 +25,7 @@ data class AppTypography(
     val labelSmall: TextStyle,
 )
 
-data class AppShapes(
+data class AppShape(
     val container: Shape,
     val button: Shape,
 )
@@ -60,7 +60,7 @@ val LocalAppTypography = compositionLocalOf {
 }
 
 val LocalAppShape = compositionLocalOf {
-    AppShapes(
+    AppShape(
         container = RectangleShape,
         button = RectangleShape,
     )

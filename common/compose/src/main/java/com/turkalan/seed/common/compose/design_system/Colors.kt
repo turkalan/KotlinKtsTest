@@ -1,7 +1,5 @@
 package com.turkalan.seed.common.compose.design_system
 
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 val Transparent = Color(0x00000000)
@@ -20,7 +18,7 @@ val Red = Color(0xFFE5235C)
 val Yellow = Color(0xFFFFCA02)
 val LightGray = Color(0xFFC2C6DD)
 
-internal val DarkColorScheme = darkColorScheme(
+internal val DarkColorScheme = AppColorScheme(
     primary = DarkPurple,
     secondary = MidnightBlue,
     background = DarkPurple,
@@ -29,7 +27,7 @@ internal val DarkColorScheme = darkColorScheme(
     onBackground = White,
 )
 
-internal val LightColorScheme = lightColorScheme(
+internal val LightColorScheme = AppColorScheme(
     primary = DarkPurple,
     secondary = MidnightBlue,
     background = DarkPurple,
